@@ -11,8 +11,8 @@ struct Bounds {
     upper: i129
 }
 
-impl BoundsLegacyHash of LegacyHash<Bounds> {
-    fn hash(state: felt252, value: Bounds) -> felt252 {
-        LegacyHash::hash(state, (value.lower, value.upper))
-    }
-}
+// impl BoundsLegacyHash of LegacyHash<Bounds> {
+//     fn hash(state: felt252, value: Bounds) -> felt252 {
+//         LegacyHash::hash(state, (value.lower, value.upper))
+//     }
+// }

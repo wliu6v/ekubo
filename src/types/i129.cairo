@@ -84,7 +84,8 @@ impl i129LegacyHash of LegacyHash<i129> {
             hashable += 0x100000000000000000000000000000000; // 2**128
         }
 
-        pedersen(state, hashable)
+        // pedersen(state, hashable)
+        ''
     }
 }
 

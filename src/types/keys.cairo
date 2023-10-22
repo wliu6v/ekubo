@@ -1,4 +1,4 @@
-use hash::{pedersen};
+// use hash::{pedersen};
 use starknet::{contract_address_const, ContractAddress};
 use option::{Option, OptionTrait};
 use traits::{Into, TryInto};
@@ -25,10 +25,11 @@ struct PoolKey {
 
 impl PoolKeyHash of LegacyHash<PoolKey> {
     fn hash(state: felt252, value: PoolKey) -> felt252 {
-        LegacyHash::hash(
-            LegacyHash::hash(state, (value.token0, value.token1, value.fee, value.tick_spacing)),
-            value.extension
-        )
+        // LegacyHash::hash(
+        //     LegacyHash::hash(state, (value.token0, value.token1, value.fee, value.tick_spacing)),
+        //     value.extension
+        // )
+        ''
     }
 }
 
@@ -44,7 +45,8 @@ struct PositionKey {
 
 impl PositionKeyHash of LegacyHash<PositionKey> {
     fn hash(state: felt252, value: PositionKey) -> felt252 {
-        LegacyHash::hash(state, (value.salt, value.owner, value.bounds))
+        // LegacyHash::hash(state, (value.salt, value.owner, value.bounds))
+        ''
     }
 }
 
